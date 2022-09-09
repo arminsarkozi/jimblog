@@ -27,6 +27,6 @@ social:
   links:
     - https://github.com/arminsarkozi
 
-url: https://arminsarkozi.github.io
+url: https://arminsarkozi.github.io/jimedli
 baseurl: jimedli
 destination: ./docs
