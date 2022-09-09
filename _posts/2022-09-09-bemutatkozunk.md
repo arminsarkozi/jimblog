@@ -8,7 +8,7 @@ category: informacio
 title: "Bemutatkozás"
 featured: true
 ---
-Üdvözölünk a weboldalunkon! A Jimedli egy blognak szánt weboldal, ahol cikkeket olvashatsz és információkkal lát el. <a href="https://jekyllrb.com/" class="no-change-link">Jekyll</a> segít a blogkezelésben.
+Üdvözlünk a weboldalunkon! A Jimedli egy blognak szánt weboldal, ahol cikkeket olvashatsz és információkkal lát el. <a href="https://jekyllrb.com/" class="no-change-link">Jekyll</a> segít a blogkezelésben.
 
 Én, személyesen Armin készítettem ezt az oldalt, méghozzá mi más lenne a <span style="color: var(--brand-blue); font-weight: 700">Jimedli</span> szó, ha nem Jim, a nyulam neve? Ő ez itt:
 ![Jim nyuszi](assets/images/Jim_nyuszi.jpg)

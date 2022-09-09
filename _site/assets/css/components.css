@@ -44,6 +44,11 @@ body {
         border-bottom: 2px solid #000;
     }
 
+    .padding-body .posts--post {
+        background-color: rgb(64, 66, 68);
+        color: #fff;
+    }
+
 
 
 
