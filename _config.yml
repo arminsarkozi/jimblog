@@ -28,5 +28,5 @@ social:
     - https://github.com/arminsarkozi
 
 url: "https://arminsarkozi.github.io/jimedli"
-baseurl: ""
+baseurl: "/jimedli"
 destination: ./docs
