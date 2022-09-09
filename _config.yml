@@ -27,6 +27,6 @@ social:
   links:
     - https://github.com/arminsarkozi
 
-domain: arminsarkozi.github.io
-url: https://arminsarkozi.github.io
-  baseurl: ""
+url: "https://arminsarkozi.github.io"
+baseurl: ""
+destination: ./docs
