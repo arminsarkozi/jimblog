@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>{{ page.title }} | jimedli</title>
+    <link rel="stylesheet" href="assets/css/external/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/default-root.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+    <script src="assets/js/navigation-bar.js"></script>
+    {% seo title=false %}
+</head>
+<body>
+    <div class="main-content">
+        {% include navigation.html %}
+        <main  class="main{% if page.worker %} content-margin-left{% endif %}{% if page.role == 'about' %} padding-body{% endif %}{% if page.layout == 'post' %} content-mini{% endif %}{% if page.layout == 'defaulthome' %} content-mini{% endif %}">
+            {{ content }}
+        </main>
+    </div>
+    {% include footer.html %}
+</body>
+</html>

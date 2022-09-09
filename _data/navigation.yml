@@ -1,0 +1,6 @@
+- name: Kezdőlap
+  link: /
+- name: Rólunk
+  link: /rolunk
+- name: Impresszum
+  link: /impresszum

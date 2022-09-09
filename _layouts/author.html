@@ -1,0 +1,19 @@
+---
+layout: default
+role: author
+---
+<h1 class="author-name">{{ page.name }}</h1>
+<h2 class="author-position">{{ page.position }}</h2>
+<img src="{{ page.picture }}" alt="{{ page.picturealt }}" class="author-image">
+
+<div class="author-description">
+  {{ content }}
+</div>
+
+<h2 class="author-posts-title">Bejegyzések</h2>
+<ul class="no-marks-list">
+  {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+  {% for post in filtered_posts %}
+    <li><a href="{{ post.url }}" class="no-change-link__white">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>

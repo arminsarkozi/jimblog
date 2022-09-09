@@ -1,0 +1,19 @@
+---
+layout: defaulthome
+title: Kezdőlap
+---
+<h1 class="posts-text">Legutóbbi bejegyzések</h1>
+
+<ul class="posts">
+  {% for post in site.posts limit: 13 %}
+    <li class="posts--post">
+      <img src="{{ post.cover }}" alt="{{ post.coveralt }}" class="posts--post--cover">
+      <h2 class="posts--post--title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt | truncate: 120 }}
+    </li>
+  {% endfor %}
+</ul>
+<!--
+  License: MIT
+  Link: https://github.com/arminsarkozi/jimedli/blob/main/LICENSE
+-->

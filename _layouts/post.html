@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="post-content">
+    <h1>{{ page.title }}</h1>
+    <p class="post-content--data"><span class="post-content--data--date">{{ page.date | date_to_string }}</span>{% if page.lastchange != undefined %} | Utolsó módosítás: <span class="post-content--data--date">{{ page.lastchange }}</span>{% endif %} &ndash; <a href="authors/{{ page.author }}" class="no-change-link">{{ page.author }}</a></p>
+
+    <div style="background: url('{{ page.cover }}') no-repeat center center/cover; min-height: 21vh; filter: grayscale(.67)" title="Borítókép"></div> 
+    {{ content }}
+
+    {% if page.tags[0] != undefined %}
+        <ul class="tags-list">
+            Címkék:
+        {% for tag in page.tags %}
+            <li class="tag"><span>{{ tag }}</span></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+    <span class="border-top">Nincs címke.</span>
+    {% endif %}
+</div>
+<script src="assets/js/changeDate.js"></script>

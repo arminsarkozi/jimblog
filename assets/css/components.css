@@ -1,0 +1,473 @@
+/**
+ * Table of Contents:
+ *
+ * DOCUMENT...............main document
+ *
+ * HEADER.................navigation bar (nav)
+ *
+ * MAIN...................main content
+ *    -> Posts....................................
+ *    -> Post.....................................
+ *    -> Imprint and author page..................
+ *
+ * FOOTER.................footer
+ *
+ * KEYFRAMES..............keyframe animations
+ */
+
+
+
+
+
+
+/* ------------------- *\
+        #DOCUMENT
+\* ------------------- */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    min-height: fit-content;
+    flex: 1;
+}
+
+.padding-body { /* about page */
+    padding: 15px;
+    line-height: 1.3;
+    display: inline-block;
+}
+
+    .padding-body h1 {
+        border-bottom: 2px solid #000;
+    }
+
+
+
+
+
+/* ------------------- *\
+        #HEADER
+\* ------------------- */
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: var(--brand-dark);
+}
+
+    .nav--item {
+        display: inline-block;
+        padding: 10px;
+        line-height: 2rem;
+        color: var(--brand-blue);
+        text-decoration: none;
+    }
+
+    .icon {
+        color: #ffff;
+    }
+
+    @media (max-width: 517px) {
+        
+        .nav--item:not(.nav--logo, .icon) {
+            display: none;
+        }
+
+    
+    }
+
+    @media (min-width: 517px) {
+
+        .nav--item.icon {
+            display: none;
+        }
+
+    }
+
+    .nav--item:not(.nav--logo, .icon).nav--item__current:hover {
+        background-color: rgb(223, 228, 240);
+        color: var(--brand-light-blue);
+    }
+
+    .nav--item:not(.nav--logo, .nav--item__current, .icon):hover {
+        background-color: rgb(223, 228, 240);
+        color: var(--brand-blue);
+    }
+
+        .nav--item__current:not(.nav--logo) {
+            color: #ffff;
+        }
+    
+    .nav--logo {
+        font-family: Comfortaa, cursive;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--brand-blue);
+    }
+
+        .nav--logo__second-section {
+            color: var(--brand-light-blue);
+        }
+
+
+
+
+
+/* ------------------- *\
+        #MAIN
+\* ------------------- */
+
+.main {
+    order: 1;
+}
+
+/* ------------------- *\
+     ## Posts
+\* ------------------- */
+
+.posts {
+    list-style: none;
+}
+
+    .posts--post {
+        display: block;
+        max-width: 100%;
+        padding: 10px 20px 20px 20px;
+    }
+
+    @media (min-width: 517px) {
+
+        .posts--post {
+            display: inline-block;
+            max-width: 29%;
+            margin: 7px;
+        }
+
+        .posts--post:nth-of-type(even) {
+            background-color: rgb(70, 91, 133);
+        }
+
+        .posts--post:nth-of-type(odd) {
+            background-color: rgb(64, 66, 68);
+            color: #fff;
+        }
+
+        .posts--post:nth-of-type(4n) {
+            background-color: rgb(52, 89, 99);
+            color: #fff;
+        }
+
+    }
+
+    @media (min-width: 870px) {
+
+        .posts--post {
+            max-width: 31%;
+        }
+    
+    }
+
+    .posts--post::after {
+        display: block;
+        content: "";
+        background-color: #444349;
+        width: 58vw;
+        height: 0.29rem;
+        margin: 1.5rem auto;
+    }
+
+    @media (min-width: 517px) {
+
+        .posts--post::after {
+            display: none;
+        }
+
+    }
+
+        .posts--post--cover {
+            width: 100%;
+        }
+
+        .posts--post--title, .posts--post--title * {
+            text-decoration: none;
+            color: #1f9f8d;
+            font-weight: 700;
+            margin-block-start: 0.31em;
+            margin-block-end: 0.31em;            
+        }
+
+        @media (min-width: 517px) {
+
+            .posts--post--title {
+                font-size: 1.1em;
+            }
+
+        }
+
+        .posts--post p {
+            font-family: system-ui, "Open Sans", sans-serif;
+            line-height: 1.3;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+
+
+
+.posts-text {
+    font-size: 1.35em;
+    font-weight: 650;
+    line-height: 1.2;
+    padding: 0 0 0 19px;
+    margin-block-end: 0.2rem;
+}
+
+/* ------------------- *\
+     ## Post
+\* ------------------- */
+
+.tags-list {
+    display: inline-block;
+    max-width: 100%;
+    list-style-type: none;
+    margin-top: 6px;
+    padding-top: 3px;
+    border-top: 2px solid var(--brand-dark);
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--brand-blue);
+    color: #fff;
+    font-size: 15.7px;
+    padding: 4.9px;
+    margin: 2px;
+}
+
+.post-content, .content-margin-left /* content-margin-left is not in post */ {
+    padding-left: .6rem;
+    padding-bottom: 1rem;
+    line-height: 1.25;
+}
+
+    .post-content--data {
+        border: 2.4px solid #314c89; /* #646161 */
+        padding: 2px;
+    }
+
+    .post-content img {
+        max-width: 95%;
+        display: block;
+        margin: 15px 15px 15px 0;
+    }
+
+    @media (min-width: 961px) {
+        
+        .post-content img {
+            max-width: 34%;
+        }
+
+    }
+
+
+
+
+
+/* ------------------- *\
+## Imprint and author page
+\* ------------------- */
+
+/* Imprint */
+
+.author-card {
+    display: inline-block;
+    max-width: 98%;
+    background-color: #74959066;
+    margin: 4px;
+    padding: 4px;
+    line-height: 1.3;
+}
+
+@media (min-width: 517px) {
+
+    .author-card {
+        max-width: 39%;
+    }
+
+}
+
+    .author-card h2 {
+        font-size: 1.2em;
+        margin-block-start: .4rem;
+        margin-block-end: .5em;
+    }
+
+    .author-card h3 {
+        font-size: .9em;
+        margin-top: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+/* Author page */
+
+.author-name {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: #fff;
+    -webkit-text-stroke-width: 2.3499999999999996px;
+    -webkit-text-stroke-color: #000;
+}
+
+.author-position {
+    font-size: 1rem;
+    margin-block-start: .7em;
+    margin-block-end: .7em;
+}
+
+.author-image {
+    max-width: 85px;
+    border-radius: 50%;
+    border: 2px solid cornflowerblue;
+    box-shadow: 2px 3px 3px 3px #181818bd;
+}
+
+.author-image:hover {
+    animation: stretching 2s ease-in-out 500ms 1 alternate forwards;
+}
+
+
+.author-description {
+    padding: 0 20% 0 20%;
+}
+
+.author-posts-title {
+    margin-block: 0;
+}
+
+
+
+
+
+/* ------------------- *\
+        #SIDEBAR
+\* ------------------- */
+
+.sidebar {
+    order: 2;
+    padding-left: .9rem;
+}
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        display: none;
+    }
+
+}
+
+
+
+
+
+/* ------------------- *\
+        #FOOTER
+\* ------------------- */
+
+.footer, .footer * {
+    background-color: var(--brand-dark);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+}
+
+
+
+
+
+/* ------------------- *\
+       #KEYFRAMES
+\* ------------------- */
+
+@keyframes rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(359deg);}
+}
+
+@keyframes stretching {
+    0% {}
+    39% {transform: scaleX(1.6);}
+    70% {transform: scaleX(1.6) scaleY(1.6);}
+    100% {transform: scaleX(1.9) scaleY(1.9);}
+}
+
+
+
+
+
+/* ------------------- *\
+     #OTHER CLASSES
+\* ------------------- */
+
+.no-change-link {
+    color: var(--brand-blue);
+    text-decoration: none;
+}
+
+    .no-change-link__white {
+        color: #fff;
+        font-weight: 660;
+        margin-bottom: 3px;
+    }
+
+.good-format-link {
+    color: rgb(0, 0, 238);
+    text-decoration: underline rgb(0, 0, 238);
+}
+
+.content-margin-left {
+    text-align: center;
+    background-color: var(--brand-blue-2);
+}
+
+@media (min-width: 800px) {
+
+    .content-mini {
+        max-width: 59.999%;
+        border-right: 2px solid var(--brand-dark);
+        padding-right: 12px;
+    }
+
+    main.content-mini {
+        max-width: 66%;
+    }
+
+}
+
+.no-marks-list {
+    list-style-type: none;
+}
+
+.border-top {
+    display: block;
+    max-width: 98%;
+    border-top: 2px solid var(--brand-dark);
+}
+
+.featured-mark {
+    font-size: small;
+    background-color: #fff;
+    color: var(--brand-light-blue);
+    margin: 10px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.display-flex {
+    display: flex;
+}

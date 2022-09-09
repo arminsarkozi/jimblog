@@ -1,0 +1,15 @@
+<nav class="nav">
+        <a href="/" class="nav--item nav--logo">jim<span class="nav--logo nav--logo__second-section">edli</span></a>
+    {% for item in site.data.navigation %}
+        <a href="{{item.link}}" class="nav--item{% if page.url == item.link %} nav--item__current{% endif %}">
+        {{ item.name }}
+        </a>
+    {% endfor %}
+    <a href="javascript:void(0)" id="navigation-icon" onclick="toggleNavigationBar()" class="nav--item icon">
+        <i class="fa fa-bars"></i>
+    </a>
+</nav>
+<!--
+  License: MIT
+  Link: https://github.com/arminsarkozi/jimedli/blob/main/LICENSE
+-->
