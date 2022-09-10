@@ -2,7 +2,7 @@
 layout: post
 author: Armin
 cover: assets/images/easter-bunny-rabbit-green-garden.jpg
-coveralt: apple
+coveralt: nyuszi
 tags: ["bemutatkozás", "első bejegyzés"]
 category: informacio
 title: "Bemutatkozás"
